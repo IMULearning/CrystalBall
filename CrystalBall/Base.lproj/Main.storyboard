@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4ha-SZ-QuI"/>
+                        <viewControllerLayoutGuide type="bottom" id="mS3-Uv-WYG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CB00001" translatesAutoresizingMaskIntoConstraints="NO" id="R7M-et-iH7">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3S-hy-I9n">
+                                <rect key="frame" x="30" y="499" width="261" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="261" id="vY8-vg-1rr"/>
+                                    <constraint firstAttribute="height" constant="49" id="y4Q-Zl-nC8"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="button-off">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="button-on"/>
+                                <connections>
+                                    <action selector="buttonPressed" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9Sy-eG-ddS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It is decidedly so" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJ1-0f-k4u">
+                                <rect key="frame" x="39" y="179" width="242" height="138"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="242" id="22z-B8-xsp"/>
+                                    <constraint firstAttribute="height" constant="138" id="4nO-Rs-mwv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="30"/>
+                                <color key="textColor" red="0.50196081399917603" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mS3-Uv-WYG" firstAttribute="top" secondItem="t3S-hy-I9n" secondAttribute="bottom" constant="20" id="Lfk-Aw-zpf"/>
+                            <constraint firstItem="mS3-Uv-WYG" firstAttribute="top" secondItem="R7M-et-iH7" secondAttribute="bottom" id="Ne8-yY-CHn"/>
+                            <constraint firstItem="R7M-et-iH7" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Ola-YY-i4b"/>
+                            <constraint firstAttribute="centerX" secondItem="t3S-hy-I9n" secondAttribute="centerX" id="RY6-RU-f4i"/>
+                            <constraint firstAttribute="trailing" secondItem="R7M-et-iH7" secondAttribute="trailing" id="ZEk-14-KA4"/>
+                            <constraint firstItem="PJ1-0f-k4u" firstAttribute="centerX" secondItem="R7M-et-iH7" secondAttribute="centerX" id="eIL-oK-pt1"/>
+                            <constraint firstItem="R7M-et-iH7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="fzs-pZ-JD6"/>
+                            <constraint firstItem="PJ1-0f-k4u" firstAttribute="centerY" secondItem="R7M-et-iH7" secondAttribute="centerY" constant="-36" id="lJv-VY-HdV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="R7M-et-iH7" id="ohH-hh-zCp"/>
+                        <outlet property="predictionLabel" destination="PJ1-0f-k4u" id="xoX-E5-TWV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="74" y="129"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CB00001" width="320" height="568"/>
+        <image name="button-off" width="261" height="49"/>
+        <image name="button-on" width="261" height="47"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
